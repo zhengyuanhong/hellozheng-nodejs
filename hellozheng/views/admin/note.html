@@ -1,0 +1,38 @@
+{{extend './admin_template.html'}}
+
+{{block 'body'}}
+ <div class="layui-container">
+    <div class="layui-col-md12">
+
+       <div class="contain" style="margin-top: 20px;" >
+
+          <form class="layui-form" action="/admin/note" method="POST">
+
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">笔记内容</label>
+                <div class="layui-input-block">
+                  <textarea name="content" placeholder="记下你想写的东西"  class="layui-textarea"></textarea>
+                </div>
+              </div>
+              
+              <div class="layui-form-item">
+                <label class="layui-form-label">图片</label>
+                <div class="layui-input-block">
+                  <input type="text" name="img"  placeholder="插入图片" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+
+              <div class="layui-form-item">
+                <div class="layui-input-block">
+                  <button class="layui-btn" lay-submit lay-filter="formDemo">立即发布</button>
+                  <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+              </div>
+          </form>  
+
+       </div>
+    </div>
+
+ </div>
+
+{{/block}}

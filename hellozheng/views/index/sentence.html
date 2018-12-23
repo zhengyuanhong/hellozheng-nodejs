@@ -1,0 +1,74 @@
+{{extend '../layout/index_template.html'}}
+
+{{block 'body'}}
+    <div class="header">
+    <div class="menu-btn">
+      <div class="menu"></div>
+    </div>
+    <h1 class="logo">
+      <a href="index.html">
+       <!--  <span>www.hellozheng.cn</span> -->
+        <img src="/public/img/logoa.png" width="85" height="85">
+      </a>
+    </h1>
+    <div class="nav">
+      <a href="/article">文章</a>
+      <!-- <a href="/sentence" class="active" >经典句子</a> -->
+      <a href="/note">笔记</a>
+      <a href="/books">图书</a>
+      <a href="/message">留言</a>
+      <a href="/about">进度</a>
+    </div>
+    <ul class="layui-nav header-down-nav">
+      <li class="layui-nav-item"><a href="/article">文章</a></li>
+<!--         <li class="layui-nav-item"><a href="/sentence" class="active" >经典句子</a></li> -->
+      <li class="layui-nav-item"><a href="/note">笔记</a></li>
+      <li class="layui-nav-item"><a href="/books">图书</a></li>
+      <li class="layui-nav-item"><a href="/message">留言</a></li>
+      <li class="layui-nav-item"><a href="/about">进度</a></li>
+    </ul>
+  </div>
+
+
+  <div class="content whisper-content">
+    <div class="cont">
+      <div class="whisper-list">
+        <div class="item-box">
+          <div class="item">
+
+            <div class="whisper-title">
+              <i class="layui-icon layui-icon-date"></i><span class="hour">12:25</span><span class="date">2018/06/08</span>
+            </div>
+            <p class="text-cont">
+              一直听说牛油果吃起来像肥皂、肥肉，虽然很难吃，但是价格却很贵，我还是想尝试一下。
+            </p>
+          </div>
+
+        </div>
+          <div class="btn-box layui-container">
+              <button class="layui-btn layui-btn-primary">上一页</button>
+              <button class="layui-btn layui-btn-primary">下一页</button>
+          </div>
+      </div>
+    </div>
+  </div>
+{{/block}}
+
+{{block 'script'}}
+  <script type="text/javascript" src="public/layui/layui.js"></script>
+  <script type="text/javascript">
+   layui.config({
+      base: '/public/js/util/'
+    }).use(['element','laypage','form','menu'],function(){
+      element = layui.element,laypage = layui.laypage,form = layui.form,menu = layui.menu;
+      laypage.render({
+        elem: 'demo'
+        ,count: 70 //数据总数，从服务端得到
+      });
+      menu.init();
+      menu.off();
+      menu.submit()
+    })
+  </script>
+
+{{/block}}

@@ -1,0 +1,161 @@
+{{extend '../layout/index_template.html'}}
+
+{{block 'body'}}
+    <div class="header">
+    <div class="menu-btn">
+      <div class="menu"></div>
+    </div>
+    <h1 class="logo">
+      <a href="index.html">
+       <!--  <span>www.hellozheng.cn</span> -->
+        <img src="/public/img/logoa.png" width="85" height="85">
+      </a>
+    </h1>
+    <div class="nav">
+      <a href="/article">文章</a>
+     <!--  <a href="/sentence">经典句子</a> -->
+      <a href="/note">笔记</a>
+      <a href="/books" class="active">图书</a>
+      <a href="/message">留言</a>
+      <a href="/about">进度</a>
+    </div>
+    <ul class="layui-nav header-down-nav">
+      <li class="layui-nav-item"><a href="/article">文章</a></li>
+     <!--  <li class="layui-nav-item"><a href="/sentence">经典句子</a></li> -->
+      <li class="layui-nav-item"><a href="/note">笔记</a></li>
+      <li class="layui-nav-item"><a href="/books" class="active">图书</a></li>
+      <li class="layui-nav-item"><a href="/message">留言</a></li>
+      <li class="layui-nav-item"><a href="/about">进度</a></li>
+    </ul>
+  </div>
+
+  <div class="album-content w1000"  id="layer-photos-demo" class="layer-photos-demo">
+<!--     <div class="img-info">
+      <img src="/public/img/xc_img1.jpg" alt="">
+      <div class="title">
+        <p class="data">今日上传<span>2018/10/10</span></p>
+        <p class="text">观赏最美的土耳其的日</p>
+      </div>
+    </div> -->
+    <div class="img-list">
+      <div class="layui-fluid" style="padding:0">
+
+        <div class="layui-row layui-col-space12 space">
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1635008787,1131006273&fm=26&gp=0.jpg">
+              <div class="cont-text">
+                <div class="data">2018/08/08</div>
+                <p class="address"><i class="layui-icon layui-icon-location"></i><span>江西九江</span></p>
+                <p class="briefly">今日天气晴朗,庐山一日游</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1635008787,1131006273&fm=26&gp=0.jpg">
+              <div class="cont-text">
+                <div class="data">2018/08/08</div>
+                <p class="address"><i class="layui-icon layui-icon-location"></i><span>江西九江</span></p>
+                <p class="briefly">今日天气晴朗,庐山一日游</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1635008787,1131006273&fm=26&gp=0.jpg">
+              <div class="cont-text">
+                <div class="data">2018/08/08</div>
+                <p class="address"><i class="layui-icon layui-icon-location"></i><span>江西九江</span></p>
+                <p class="briefly">今日天气晴朗,庐山一日游</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1635008787,1131006273&fm=26&gp=0.jpg">
+              <div class="cont-text">
+                <div class="data">2018/08/08</div>
+                <p class="address"><i class="layui-icon layui-icon-location"></i><span>江西九江</span></p>
+                <p class="briefly">今日天气晴朗,庐山一日游</p>
+              </div>
+            </div>
+          </div>          
+
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1635008787,1131006273&fm=26&gp=0.jpg">
+              <div class="cont-text">
+                <div class="data">2018/08/08</div>
+                <p class="address"><i class="layui-icon layui-icon-location"></i><span>江西九江</span></p>
+                <p class="briefly">今日天气晴朗,庐山一日游</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1635008787,1131006273&fm=26&gp=0.jpg">
+              <div class="cont-text">
+                <div class="data">2018/08/08</div>
+                <p class="address"><i class="layui-icon layui-icon-location"></i><span>江西九江</span></p>
+                <p class="briefly">今日天气晴朗,庐山一日游</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1635008787,1131006273&fm=26&gp=0.jpg">
+              <div class="cont-text">
+                <div class="data">2018/08/08</div>
+                <p class="address"><i class="layui-icon layui-icon-location"></i><span>江西九江</span></p>
+                <p class="briefly">今日天气晴朗,庐山一日游</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-xs12 layui-col-sm4 layui-col-md4">
+            <div class="item">
+              <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1635008787,1131006273&fm=26&gp=0.jpg">
+              <div class="cont-text">
+                <div class="data">2018/08/08</div>
+                <p class="address"><i class="layui-icon layui-icon-location"></i><span>江西九江</span></p>
+                <p class="briefly">今日天气晴朗,庐山一日游</p>
+              </div>
+            </div>
+          </div> 
+      </div>
+
+    </div>
+  </div>
+
+{{/block}}
+
+
+{{block 'script'}}
+  <script type="text/javascript" src="/public/layui/layui.js"></script>
+  <script type="text/javascript">
+   layui.config({
+      base: '/public/js/util/'
+    }).use(['element','laypage','form','layer','menu'],function(){
+      element = layui.element,laypage = layui.laypage,form = layui.form,layer = layui.layer,menu = layui.menu;
+      laypage.render({
+        elem: 'demo'
+        ,count: 70 //数据总数，从服务端得到
+      });
+      layer.photos({
+        photos: '#layer-photos-demo'
+        ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+        ,tab:function(pic,layero){
+          console.log(pic,layero)
+        }
+      });
+      menu.init(); 
+    })
+  </script>
+
+{{/block}}

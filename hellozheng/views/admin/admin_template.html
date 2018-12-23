@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/public/layui/css/layui.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/public/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/blog.css">
+</head>
+<body>
+{{include './layout/header.html'}}
+
+  {{block 'body'}}
+
+  {{/block}}
+
+  <script type="text/javascript" src="/public/layui/layui.js"></script>
+  <script type="text/javascript">
+    layui.config({
+      base: '/public/js/util/'
+    }).use(['element','laypage','jquery','menu'],function(){
+      element = layui.element,laypage = layui.laypage,$ = layui.$,menu = layui.menu;
+      laypage.render({
+        elem: 'demo'
+        ,count: 70 //数据总数，从服务端得到
+      });
+      menu.init();
+    })
+  </script>
+</body>
+</html>

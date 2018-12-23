@@ -1,0 +1,45 @@
+{{extend './admin_template.html'}}
+
+{{block 'body'}}
+<div class="layui-container">
+    <div class="layui-col-md12">
+
+       <div class="contain" style="margin-top: 20px;" >
+
+			<table class="layui-table">
+			  <colgroup>
+			    <col width="100">
+			    <col>
+			    <col width="70">
+			    <col width="70">
+			  </colgroup>
+			  <thead>
+			    <tr>
+			      <th>编号ID</th>
+			      <th>简介</th>
+			      <th>操作1</th>
+			      <th>操作2</th>
+			    </tr> 
+			  </thead>
+			  <tbody>
+			  	{{each data}}
+			    <tr>
+			      <td>{{$value._id.toString()}}</td>
+			      <td>{{$value.books_des}}</td>
+			      <td><a href="/admin/books/delete/{{$value._id.toString()}}" style="color: red;" >删除</a></td>
+			      <td><a href="/admin/books/edit/{{$value._id.toString()}}" style="color: blue;">编辑</a></td>
+			    </tr>
+			    {{/each}}
+			  </tbody>
+			</table>
+       </div>
+      <div class="btn-box">
+        <button class="layui-btn layui-btn-primary"><a href="/admin/books/control?page={{page-1}}">上一页</a></button>
+        <button class="layui-btn layui-btn-primary"><a href="/admin/books/control?page={{page+1}}">下一页</a></button>
+      </div>
+    </div>
+
+ </div>
+
+
+{{/block}}

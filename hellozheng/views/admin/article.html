@@ -1,0 +1,93 @@
+{{extend './admin_template.html'}}
+
+{{block 'body'}}
+ <div class="layui-container">
+    <div class="layui-col-md12">
+
+       <div class="contain" style="margin-top: 20px;" >
+
+          <form class="layui-form" action="/admin/article" method="POST">
+              <div class="layui-form-item">
+                <label class="layui-form-label">标题</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+
+              <div class="layui-form-item">
+                <label class="layui-form-label">文章类别</label>
+                <div class="layui-input-block">
+                  <input type="text" name="category" required  lay-verify="required" placeholder="请输入文章类别" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">内容1</label>
+                <div class="layui-input-block">
+                  <textarea name="content1" placeholder="请输入文章第一段"  class="layui-textarea"></textarea>
+                </div>
+              </div>
+
+              <div class="layui-form-item">
+                <label class="layui-form-label">图片一</label>
+                <div class="layui-input-block">
+                  <input type="text" name="img1"  placeholder="插入第一张图片" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">内容2</label>
+                <div class="layui-input-block">
+                  <textarea name="content2" placeholder="请输入文章第二段"  class="layui-textarea"></textarea>
+                </div>
+              </div>     
+
+              <div class="layui-form-item">
+                <label class="layui-form-label">图片二</label>
+                <div class="layui-input-block">
+                  <input type="text" name="img2"  placeholder="插入第二张图片" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+
+              <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">内容3</label>
+                <div class="layui-input-block">
+                  <textarea name="content3" placeholder="请输入文章第三段"  class="layui-textarea"></textarea>
+                </div>
+              </div>
+
+              <div class="layui-form-item">
+                <label class="layui-form-label">图片三</label>
+                <div class="layui-input-block">
+                  <input type="text" name="img3"  placeholder="插入第三张图片" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+
+              <div class="layui-form-item">
+                <label class="layui-form-label">购买链接</label>
+                <div class="layui-input-block">
+                  <input type="text" name="buy_link"  placeholder="请输入购买链接" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+
+              <div class="layui-form-item">
+                <label class="layui-form-label">图片链接</label>
+                <div class="layui-input-block">
+                  <input type="text" name="photo_link"  placeholder="请输入图片链接" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+              <div>{{tip}}</div>
+              <div class="layui-form-item">
+                <div class="layui-input-block">
+                  <button class="layui-btn" lay-submit lay-filter="formDemo">立即发布</button>
+                  <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+              </div>
+          </form>  
+
+       </div>
+    </div>
+
+ </div>
+
+{{/block}}

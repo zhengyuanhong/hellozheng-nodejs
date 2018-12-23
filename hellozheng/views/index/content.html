@@ -1,0 +1,103 @@
+{{extend '../layout/index_template.html'}}
+{{block 'body'}}
+    <div class="header">
+    <div class="menu-btn">
+      <div class="menu"></div>
+    </div>
+    <h1 class="logo">
+      <a href="index.html">
+       <!--  <span>www.hellozheng.cn</span> -->
+        <img src="/public/img/logoa.png" width="85" height="85">
+      </a>
+    </h1>
+    <div class="nav">
+      <a href="/article" class="active">文章</a>
+     <!--  <a href="/sentence">经典句子</a> -->
+      <a href="/note">笔记</a>
+      <a href="/books">图书</a>
+      <a href="/message">留言</a>
+      <a href="/about">进度</a>
+    </div>
+    <ul class="layui-nav header-down-nav">
+      <li class="layui-nav-item"><a href="/article"" class="active">文章</a></li>
+      <!-- <li class="layui-nav-item"><a href="/sentence">经典句子</a></li> -->
+      <li class="layui-nav-item"><a href="/note">笔记</a></li>
+      <li class="layui-nav-item"><a href="/books">图书</a></li>
+      <li class="layui-nav-item"><a href="/message">留言</a></li>
+      <li class="layui-nav-item"><a href="/about">进度</a></li>
+    </ul>
+  </div>
+
+
+  <div class="content whisper-content leacots-content details-content layui-container">
+    <div class="cont w1000 layui-row">
+      <div class="whisper-list">
+        <div class="item-box layui-col-xs12 layui-col-sm8 layui-col-md7">
+          <div class="review-version">
+              <div class="form-box ">
+                <div class="article-cont">
+                  <div class="title">
+                    <h3>{{data.title}}</h3>
+                    <p class="cont-info"><span class="data">{{data.date.toString()}}</span><span class="types">{{data.category}}</span></p>
+                  </div>
+                  {{if data.content1}}
+                  <p>{{data.content1}}</p>
+                  {{/if}}
+                  {{if data.img1}}
+                  <img src="">
+                  {{/if}}
+                  {{if data.content2}}
+                  <p>{{data.content2}}</p>
+                  {{/if}}
+                  {{if data.img2}}
+                  <img src="">
+                  {{/if}}
+                  {{if data.content3}}
+                  <p>{{data.content3}}</p>
+                  {{/if}}
+                  {{if data.img3}}
+                  <img src="">
+                  {{/if}}
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="layui-col-xs12 layui-col-sm4 layui-col-md4 layui-col-md-offset1" >
+            <div id="zhuanglan" style="" ></div>
+
+            <div id='zhuanglan'>
+                  <span style="font-size: 16px;font-weight: bold;" >推荐书籍：</span>
+                    <hr class="layui-bg-black">
+                {{if data.buylink}}
+                  <!-- <span><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1053488404,3626439132&fm=26&gp=0.jpg" height="350" width="273px"></span> -->
+                  <span style="margin-left: 30px;" ><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1635008787,1131006273&fm=26&gp=0.jpg"  width="80%"></span>
+                  <span style="margin-left: 10px;" ><a   href="tencent://message/?uin=1713639570&Menu=yes"" class="layui-btn layui-btn-primary" style="width: 302px;margin-top: 10px;">查看详情>></a></span>
+                  {{else}}
+                    <span style="margin-left: 30px;" >暂无书籍推荐</span>
+                {{/if}}
+            </div>
+                      
+        </div>
+    </div>
+  </div>
+
+{{/block}}
+
+{{block 'script'}}
+  <script type="text/javascript" src="/public/layui/layui.js"></script>
+  <script type="text/javascript">
+    layui.config({
+      base: '/public/js/util/'
+    }).use(['element','laypage','form','menu'],function(){
+      element = layui.element,laypage = layui.laypage,form = layui.form,menu = layui.menu;
+      laypage.render({
+        elem: 'demo'
+        ,count: 70 //数据总数，从服务端得到
+      });
+      menu.init();
+      menu.submit();
+    })
+  </script>
+
+{{/block}}
